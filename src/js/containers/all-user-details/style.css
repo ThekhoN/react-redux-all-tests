@@ -1,0 +1,18 @@
+.allUserDetails {
+  background: pink;
+  color: white; }
+
+.allUserDetailsUl {
+  width: 100%;
+  text-align: center; }
+
+.allUserDetailsLi {
+  max-width: 300px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 15px 0;
+  display: inline-block; }
+
+.userAvatar {
+  max-width: 200px;
+  height: auto; }
