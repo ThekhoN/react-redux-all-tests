@@ -1,0 +1,10 @@
+.userList {
+  max-width: 300px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 15px 0;
+  display: inline-block; }
+
+.userImage {
+  max-width: 200px;
+  height: auto; }

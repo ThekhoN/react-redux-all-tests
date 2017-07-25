@@ -1,8 +1,14 @@
 # react-redux-all-tests
-handle all possible tests for react-redux applications
+## jest, enzyme, moxios(mock for axios), jest-css-modules, redux-mock-store
+* handle all possible tests for react-redux applications
 
-### using jest, enzyme, moxios for:
-* async action creators (using axios/fetch)
-* reducers
+### reducers & action creators
+* test async action creators using axios & fetch
+* redux-mock-store to mock store with initial/default state
+
+### non-connected components
 * use snapshots for stateless and non-connected components
-* use mockstore for containers (connected components)
+
+### connected components/containers
+* use shallow render from enzyme for shallow compare
+* redux-mock-store to mock store with initial/default state and test props

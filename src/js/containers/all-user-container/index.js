@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getUserDataAsync} from '../../actions/actionCreators';
+import UserList from '../../components/user-list';
 import style from './style.css';
 
-class AllUserDetails extends Component {
+export class AllUserContainer extends Component {
   componentDidMount () {
     this.props.handleGetInitialUserData();
   }
   render () {
     return (
-      <div className={style.allUserDetails}>
-        <ul className={style.allUserDetailsUl}>
+      <div className={style.allUserContainer}>
+        <ul className={style.allUserContainerUl}>
           {
-            this.props.data.map(e => <li className={style.allUserDetailsLi} key={e._id}><img className={style.userAvatar} src={e.profilePhoto} /></li>)
+            this.props.data.map(e => <UserList key={e._id} userData={e} />)
           }
         </ul>
       </div>
@@ -30,4 +31,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllUserDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(AllUserContainer);
