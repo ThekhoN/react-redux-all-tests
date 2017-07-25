@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserList Component renders correctly renders correctly 1`] = `
+<li
+  className={undefined}
+>
+  <img
+    className={undefined}
+    src="https://i1.sdlcdn.com/static/img/marketing-mailers/mailer/2016/upload999/male01.png"
+  />
+</li>
+`;
