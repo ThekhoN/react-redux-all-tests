@@ -5,11 +5,10 @@ import AllUserContainer from '../all-user-container';
 
 const App = () => (
   <div>
-    <Wrapper>
-      <h2 className={style.mainHeader}>React Hot Webpack Test. . ... *_ *</h2>
-      <br />
-      <AllUserContainer />
+    <Wrapper marginBottom='15px'>
+      <h2 className={style.mainHeader}>Testing React Redux with Jest & Enzyme</h2>
     </Wrapper>
+    <AllUserContainer />
   </div>
 );
 

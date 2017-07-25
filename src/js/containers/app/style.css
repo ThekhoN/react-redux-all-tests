@@ -1,3 +1,6 @@
 .mainHeader {
   color: orange;
-  font-weight: bold; }
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #969696;
+  padding: 20px;
+  box-sizing: border-box; }
