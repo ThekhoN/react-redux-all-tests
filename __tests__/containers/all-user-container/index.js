@@ -1,22 +1,28 @@
-import React, {Component} from 'react';
-import renderer from 'react-test-renderer';
+import React from 'react';
 import {shallow} from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import ConnectedAllUserContainer, {AllUserContainer} from '../../../src/js/containers/all-user-container';
 import {dummyData} from '../../../src/js/API';
+import {intialStateUserData} from '../../../src/js/reducers/userData';
 
-describe('AllUserContainer Container renders correctly', () => {
-  // it('renders correctly', () => {
-  //   const tree = renderer.create(
-  //     <AllUserContainer data={dummyData} />
-  //   ).toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+describe('AllUserContainer', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(<AllUserContainer data={dummyData} />)
   });
-  it('renders the Component', () => {
+  it('renders the component', () => {
     expect(wrapper.length).toEqual(1);
+  });
+});
+
+describe('Connected:AllUserContainer', () => {
+  const mockStore = configureMockStore();
+  let store, container;
+  beforeEach(() => {
+    store = mockStore({userData: intialStateUserData});
+    container = shallow(<ConnectedAllUserContainer store={store} />);
+  });
+  it('renders connected:component', () => {
+    expect(container.length).toEqual(1);
   });
 });
