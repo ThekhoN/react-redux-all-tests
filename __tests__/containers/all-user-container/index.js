@@ -25,4 +25,7 @@ describe('Connected:AllUserContainer', () => {
   it('renders connected:component', () => {
     expect(container.length).toEqual(1);
   });
+  it('contains props that match initialStateUserData', () => {
+    expect(container.prop('data')).toEqual(intialStateUserData.data);
+  });
 });
